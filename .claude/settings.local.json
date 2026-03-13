@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__stitch__get_screen",
+      "WebFetch(domain:linktr.ee)",
+      "Bash(curl -L -o /tmp/rose_edition.html \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzY2YWJmZjdlMmZhMTRjYzQ4YThiNjk2ZmYwYWVlN2ZhEgsSBxDexYmesBAYAZIBIwoKcHJvamVjdF9pZBIVQhM3NTEyODc4MjEwNDE4MzkyNDMw&filename=&opi=89354086\")",
+      "Bash(curl -L -o /tmp/generated_screen.html \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzY0Y2YwN2VjMzY3NDQ0ZDVhMDQyZTZkMjg0NjNmMTYzEgsSBxDexYmesBAYAZIBIwoKcHJvamVjdF9pZBIVQhM3NTEyODc4MjEwNDE4MzkyNDMw&filename=&opi=89354086\")",
+      "Bash(curl -L -o /tmp/rose_screenshot.png \"https://lh3.googleusercontent.com/aida/AOfcidWOiBLdWW3c4edHLpqy5Ow_se3ytbX9MvmCoCAxs29bqjgpqVi8pW2TjBivYd1Y17yoaXyTrD0gMswLxwgK9SqQWDHLr4-0tbi0tpmPr95rm--5FFoKrKhTY9lpjZbRQhrNZAZg4goWZp3d9IwYgCD9fA4yweuDeJbXY6nvL30qJep97bR9GjkMeuRatsJf9fEfxwl0OwYHXp0vuU7sq9Xpa42ZnOL7R6BVbjMRRMt0ud29btJ8mmjqk1s\")",
+      "Bash(curl -L -o /tmp/generated_screenshot.png \"https://lh3.googleusercontent.com/aida/AOfcidXzcR8ch2Dbnm7UQdqMl8Tl22E6n6sHiumqFMzi9GgbpFcu6u1kSDBhDjV51WZErHFR3tgGVkwMMI3thS6yS-6jkKqVX-fWVpddAlbqL3G6U6Xjgzei-D3yK5gfdrtXTugVk_NS0cRtRhvI_iNLstLzYIREM-wePchK7_GMvuGMw8Dy3J1hdX_LtENl2odUfRUO-71go73izQ1Edf1nYPW6egMj0oig6LrGWnxJSdQI7wHq2-ReioRiTZc\")",
+      "Bash(cygpath -w /tmp/rose_screenshot.png)",
+      "Bash(find /c/Users/jbshe/source/squigls -not -path */node_modules/* -not -path */.git/* -type f)",
+      "Bash(node -e ':*)"
+    ]
+  }
+}

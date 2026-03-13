@@ -10,29 +10,34 @@ export default function Header() {
 
   return (
     <>
-      <header className="p-4 flex items-center bg-gray-800 text-white shadow-lg">
+      <header className="fixed top-0 left-0 right-0 z-40 px-8 py-5 flex items-center justify-between bg-transparent">
+        <Link to="/" className="font-display text-2xl text-rose-100 tracking-wide italic">
+          Squigls
+        </Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase text-rose-200/80">
+          <a href="#lookthrough" className="hover:text-rose-100 transition-colors">Lookthrough</a>
+          <a href="#affiliates" className="hover:text-rose-100 transition-colors">Affiliates</a>
+          <a href="#support" className="hover:text-rose-100 transition-colors">Support</a>
+        </nav>
         <button
           onClick={() => setIsOpen(true)}
-          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
+          className="md:hidden p-2 hover:bg-rose-800/50 rounded-lg transition-colors text-rose-100"
           aria-label="Open menu"
         >
           <Menu size={24} />
         </button>
-        <h1 className="ml-4 text-xl font-semibold">
-          <Link to="/">Squigls</Link>
-        </h1>
       </header>
 
       <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-gray-900 text-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
+        className={`fixed top-0 left-0 h-full w-80 bg-rose-900 text-rose-50 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-bold">Navigation</h2>
+        <div className="flex items-center justify-between p-4 border-b border-rose-800">
+          <h2 className="font-display text-xl italic text-rose-100">Squigls</h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            className="p-2 hover:bg-rose-800 rounded-lg transition-colors"
             aria-label="Close menu"
           >
             <X size={24} />
@@ -43,18 +48,39 @@ export default function Header() {
           <Link
             to="/"
             onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
             activeProps={{
               className:
-                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+                'flex items-center gap-3 p-3 rounded-lg bg-rose-500 hover:bg-rose-500/80 transition-colors mb-2',
             }}
           >
             <Home size={20} />
             <span className="font-medium">Home</span>
           </Link>
+          <a
+            href="#lookthrough"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
+          >
+            <span className="font-medium">Lookthrough</span>
+          </a>
+          <a
+            href="#affiliates"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
+          >
+            <span className="font-medium">Affiliates</span>
+          </a>
+          <a
+            href="#support"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
+          >
+            <span className="font-medium">Support</span>
+          </a>
         </nav>
 
-        <div className="p-4 border-t border-gray-700 bg-gray-800 flex flex-col gap-2">
+        <div className="p-4 border-t border-rose-800 bg-rose-900 flex flex-col gap-2">
           <ClerkHeader />
         </div>
       </aside>

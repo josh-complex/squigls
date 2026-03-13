@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --color-rose-dark: #0c0507;
+  --color-rose-900: #1e1a1b;
+  --color-rose-800: #2D0A13;
+  --color-rose-700: #3b001a;
+  --color-rose-600: #5E2C33;
+  --color-rose-500: #7b2247;
+  --color-rose-400: #a9335f;
+  --color-rose-300: #A66E7A;
+  --color-rose-200: #E8B4B8;
+  --color-rose-100: #ffd9e2;
+  --color-rose-50: #F9EAEB;
+  --font-display: "Molle", cursive;
+}
+
 body {
-  @apply m-0;
+  @apply m-0 bg-rose-dark text-rose-50;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
