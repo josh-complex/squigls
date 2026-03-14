@@ -1,9 +1,8 @@
 import { Link } from '@tanstack/react-router'
-
-import ClerkHeader from '../integrations/clerk/header-user.tsx'
+import { Home, Menu, X } from 'lucide-react'
 
 import { useState } from 'react'
-import { Home, Menu, X } from 'lucide-react'
+import ClerkHeader from '../integrations/clerk/header-user.tsx'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,11 +10,11 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between bg-transparent mix-blend-difference">
-        <Link to="/" className="font-display text-base sm:text-lg md:text-xl text-rose-100 tracking-widest italic uppercase">
+        <Link to="/" className="font-display text-lg md:text-xl lg:text-2xl xl:text-4xl text-rose-100 tracking-widest italic">
           Squigls
         </Link>
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[10px] md:text-xs tracking-widest uppercase font-light text-rose-100/80">
-          <a href="#lookthrough" className="hover:text-rose-100 transition-colors">Lookthrough</a>
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-base xl:text-lg  tracking-widest uppercase font-light text-rose-100/70">
+          <a href="#socials" className="hover:text-rose-100 transition-colors">socials</a>
           <a href="#affiliates" className="hover:text-rose-100 transition-colors">Affiliates</a>
           <a href="#support" className="hover:text-rose-100 transition-colors">Support</a>
         </nav>
@@ -58,11 +57,11 @@ export default function Header() {
             <span className="font-medium">Home</span>
           </Link>
           <a
-            href="#lookthrough"
+            href="#socials"
             onClick={() => setIsOpen(false)}
             className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
           >
-            <span className="font-medium">Lookthrough</span>
+            <span className="font-medium">socials</span>
           </a>
           <a
             href="#affiliates"

@@ -11,7 +11,7 @@ export interface SocialCardProps {
 }
 
 /**
- * Editorial-style primary social card used in the Lookthrough grid.
+ * Editorial-style primary social card used in the socials grid.
  * Tall glass card with watermark tag letter and hover lift effect.
  */
 export function SocialCard({

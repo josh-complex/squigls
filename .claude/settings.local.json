@@ -9,7 +9,8 @@
       "Bash(curl -L -o /tmp/generated_screenshot.png \"https://lh3.googleusercontent.com/aida/AOfcidXzcR8ch2Dbnm7UQdqMl8Tl22E6n6sHiumqFMzi9GgbpFcu6u1kSDBhDjV51WZErHFR3tgGVkwMMI3thS6yS-6jkKqVX-fWVpddAlbqL3G6U6Xjgzei-D3yK5gfdrtXTugVk_NS0cRtRhvI_iNLstLzYIREM-wePchK7_GMvuGMw8Dy3J1hdX_LtENl2odUfRUO-71go73izQ1Edf1nYPW6egMj0oig6LrGWnxJSdQI7wHq2-ReioRiTZc\")",
       "Bash(cygpath -w /tmp/rose_screenshot.png)",
       "Bash(find /c/Users/jbshe/source/squigls -not -path */node_modules/* -not -path */.git/* -type f)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(ls -la /c/Users/jbshe/source/squigls/*.config.*)"
     ]
   }
 }
