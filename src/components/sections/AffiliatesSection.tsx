@@ -34,7 +34,7 @@ export function AffiliatesSection() {
   return (
     <section id="affiliates" className="bg-rose-50 text-rose-950 relative overflow-hidden">
       {/* CurvedLoop heading — visible at top on mobile, decorative overlay on desktop */}
-      <div className="w-full pt-8 sm:pt-0 sm:-mb-20 md:-mb-28 relative z-0 sm:opacity-50">
+      <div className="w-full pt-8 pb-6 sm:pb-0 sm:pt-0 sm:-mb-20 md:-mb-28 relative z-0 sm:opacity-50">
         <CurvedLoop
           marqueeText="Exclusive ♥ Access ♥ "
           speed={1}

@@ -35,11 +35,11 @@ export function HeroSection() {
             }}
           />
 
-          {/* Bottom gradient for mobile text readability */}
+          {/* Right-side gradient for mobile text readability */}
           <div
             className="absolute inset-0 pointer-events-none md:hidden"
             style={{
-              background: 'linear-gradient(to top, rgb(76,5,25) 0%, rgba(76,5,25,0.97) 20%, rgba(76,5,25,0.75) 40%, rgba(76,5,25,0.3) 60%, transparent 80%)',
+              background: 'linear-gradient(to left, rgb(76,5,25) 0%, rgba(76,5,25,0.95) 25%, rgba(76,5,25,0.7) 45%, rgba(76,5,25,0.3) 60%, transparent 75%)',
             }}
           />
 
@@ -59,9 +59,9 @@ export function HeroSection() {
             }}
           />
 
-          {/* Hero text — bottom on mobile, right-center on md+ */}
-          <div className="absolute inset-0 flex items-end md:items-center md:justify-end">
-            <div className="relative z-10 w-full px-6 pb-12 md:pb-0 md:w-[42%] md:px-8 lg:px-12 xl:px-16">
+          {/* Hero text — upper-right on mobile, right-center on md+ */}
+          <div className="absolute inset-0 flex items-start pt-[30vh] justify-end md:items-center md:pt-0 md:justify-end">
+            <div className="relative z-10 w-auto max-w-[70%] px-6 text-right md:text-left md:pb-0 md:w-[42%] md:max-w-none md:px-8 lg:px-12 xl:px-16">
               <AnimatedContent distance={20} direction="vertical" duration={0.6} delay={0}>
                 <span className="block text-rose-300 tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[11px] md:text-sm mb-2 sm:mb-4">
                   Content Creator
@@ -73,7 +73,7 @@ export function HeroSection() {
                 <GradientText
                   colors={['#ffe4e6', '#fb7185', '#fda4af', '#ffe4e6']}
                   animationSpeed={6}
-                  className="!rounded-none !mx-0 !justify-start !overflow-visible !backdrop-blur-none"
+                  className="!rounded-none !mx-0 justify-end md:justify-start !overflow-visible !backdrop-blur-none"
                 >
                   <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] italic pr-2">
                     Squigls
@@ -81,7 +81,7 @@ export function HeroSection() {
                 </GradientText>
               </AnimatedContent>
 
-              <div className="mb-5 sm:mb-8 mt-3 sm:mt-6 max-w-xs sm:max-w-sm">
+              <div className="mb-5 sm:mb-8 mt-3 sm:mt-6 max-w-xs sm:max-w-sm ml-auto md:ml-0">
                 <SplitText
                   text="Always looking for streaming, modeling, acting, & voice acting opportunities!"
                   className="text-rose-100/70 font-light text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
@@ -92,12 +92,12 @@ export function HeroSection() {
                   from={{ opacity: 0, y: 20 }}
                   to={{ opacity: 1, y: 0 }}
                   tag="p"
-                  textAlign="left"
+                  textAlign="right"
                 />
               </div>
 
               <AnimatedContent distance={30} direction="vertical" duration={0.6} delay={0.4}>
-                <div className="flex">
+                <div className="flex justify-end md:justify-start">
                   <a
                     href="#support"
                     className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-4 border border-rose-300/40 text-[9px] sm:text-[11px] md:text-xs tracking-widest uppercase hover:bg-rose-300/10 hover:border-rose-300/60 transition-all duration-500 text-rose-100"

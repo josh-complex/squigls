@@ -29,12 +29,12 @@ export function SupportSection() {
         <div className="text-center mb-6">
           <FadeContent duration={800} delay={0} blur>
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl italic text-rose-100 mb-4">
-              Supporting the Muse
+              Show Your Love
             </h2>
           </FadeContent>
           <FadeContent duration={800} delay={200}>
             <p className="text-rose-200/50 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-              Love the content? Here are ways to show your support and help fuel the creative vision.
+              Love my content? Here are all the ways you can support me!
             </p>
           </FadeContent>
         </div>
