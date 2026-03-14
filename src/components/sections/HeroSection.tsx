@@ -2,7 +2,6 @@ import { Heart } from 'lucide-react'
 import Waves from '@/components/Waves'
 import SplitText from '@/components/ui/SplitText'
 import GradientText from '@/components/ui/GradientText'
-import FadeContent from '@/components/ui/FadeContent'
 import AnimatedContent from '@/components/ui/AnimatedContent'
 
 export function HeroSection() {
@@ -16,21 +15,21 @@ export function HeroSection() {
       <div className="absolute inset-0 z-10 flex justify-center">
 
         {/* Centered content island — capped width so waves peek on sides */}
-        <div className="relative w-full max-w-[1400px] h-full overflow-hidden">
+        <div className="relative w-full max-w-[1400px] h-full">
 
           {/* Rose fill behind image so no gaps show */}
           <div className="absolute inset-0 bg-rose-950" />
 
-          {/* Hero image — contained within the left portion, no cropping */}
+          {/* Hero image — covers the section on mobile, contained left on desktop */}
           <img
             src="/hero.png"
             alt="Squigls"
-            className="absolute inset-y-0 left-0 h-full object-contain object-bottom pointer-events-none select-none"
+            className="absolute inset-0 h-full w-full object-cover object-top md:object-contain md:object-bottom md:inset-y-0 md:left-0 md:w-auto pointer-events-none select-none"
           />
 
-          {/* Right-side rose gradient — fades image into text area */}
+          {/* Right-side rose gradient — fades image into text area (desktop) */}
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0 pointer-events-none hidden md:block"
             style={{
               background: 'linear-gradient(to right, transparent 0%, transparent 25%, rgba(76,5,25,0.3) 38%, rgba(76,5,25,0.7) 48%, rgba(76,5,25,0.95) 55%, rgb(76,5,25) 60%)',
             }}
@@ -40,7 +39,7 @@ export function HeroSection() {
           <div
             className="absolute inset-0 pointer-events-none md:hidden"
             style={{
-              background: 'linear-gradient(to top, rgb(76,5,25) 0%, rgba(76,5,25,0.95) 15%, rgba(76,5,25,0.6) 35%, transparent 55%)',
+              background: 'linear-gradient(to top, rgb(76,5,25) 0%, rgba(76,5,25,0.97) 20%, rgba(76,5,25,0.75) 40%, rgba(76,5,25,0.3) 60%, transparent 80%)',
             }}
           />
 
@@ -62,25 +61,25 @@ export function HeroSection() {
 
           {/* Hero text — bottom on mobile, right-center on md+ */}
           <div className="absolute inset-0 flex items-end md:items-center md:justify-end">
-            <div className="relative z-10 px-6 pb-12 md:pb-0 md:w-[42%] md:px-8 lg:px-12 xl:px-16">
-              <FadeContent duration={800} delay={0} blur>
+            <div className="relative z-10 w-full px-6 pb-12 md:pb-0 md:w-[42%] md:px-8 lg:px-12 xl:px-16">
+              <AnimatedContent distance={20} direction="vertical" duration={0.6} delay={0}>
                 <span className="block text-rose-300 tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[11px] md:text-sm mb-2 sm:mb-4">
                   Content Creator
                 </span>
-              </FadeContent>
+              </AnimatedContent>
 
-              {/* Squigls title — always gradient, blurred in */}
-              <FadeContent duration={1200} delay={200} blur>
+              {/* Squigls title — always gradient, slides in from below with blur */}
+              <AnimatedContent distance={40} direction="vertical" duration={0.8} delay={0.15} className="overflow-visible!">
                 <GradientText
                   colors={['#ffe4e6', '#fb7185', '#fda4af', '#ffe4e6']}
                   animationSpeed={6}
-                  className="!rounded-none"
+                  className="!rounded-none !mx-0 !justify-start !overflow-visible !backdrop-blur-none"
                 >
                   <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] italic">
                     Squigls
                   </h1>
                 </GradientText>
-              </FadeContent>
+              </AnimatedContent>
 
               <div className="mb-5 sm:mb-8 mt-3 sm:mt-6 max-w-xs sm:max-w-sm">
                 <SplitText
@@ -104,7 +103,7 @@ export function HeroSection() {
                     className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-4 border border-rose-300/40 text-[9px] sm:text-[11px] md:text-xs tracking-widest uppercase hover:bg-rose-300/10 hover:border-rose-300/60 transition-all duration-500 text-rose-100"
                   >
                     <Heart size={14} className="text-rose-300/70" />
-                    Show Your Support
+                    Spoil Me
                   </a>
                 </div>
               </AnimatedContent>

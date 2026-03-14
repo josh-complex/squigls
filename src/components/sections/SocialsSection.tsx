@@ -70,7 +70,7 @@ const secondaryLogoItems: LogoItem[] = secondaryLinks.map((link) => ({
       {link.hugeicon ? (
         <HugeiconsIcon icon={link.hugeicon} className="text-rose-300/60 group-hover:text-rose-300 transition-colors" size={20} />
       ) : (
-        <span className="font-display text-sm italic text-rose-300/60 group-hover:text-rose-300 transition-colors">{link.label.charAt(0)}</span>
+        <span className="font-display text-sm italic text-rose-300/60 group-hover:text-rose-300 transition-colors w-5 h-5 inline-flex items-center justify-center">{link.label.charAt(0)}</span>
       )}
       <span className="font-display text-base text-rose-100 group-hover:italic transition-all duration-300">
         {link.label}
