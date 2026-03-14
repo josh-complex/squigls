@@ -75,7 +75,7 @@ export function HeroSection() {
                   animationSpeed={6}
                   className="!rounded-none !mx-0 !justify-start !overflow-visible !backdrop-blur-none"
                 >
-                  <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] italic">
+                  <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] italic pr-2">
                     Squigls
                   </h1>
                 </GradientText>

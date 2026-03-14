@@ -13,7 +13,7 @@ export default function Header() {
         <Link to="/" className="font-display text-lg md:text-xl lg:text-2xl xl:text-4xl text-rose-100 tracking-widest italic">
           Squigls
         </Link>
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-base xl:text-lg  tracking-widest uppercase font-light text-rose-100/70">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base xl:text-lg  tracking-widest uppercase font-light text-rose-100/70">
           <a href="#socials" className="hover:text-rose-100 transition-colors">socials</a>
           <a href="#affiliates" className="hover:text-rose-100 transition-colors">Affiliates</a>
           <a href="#support" className="hover:text-rose-100 transition-colors">Support</a>
