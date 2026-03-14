@@ -1,4 +1,7 @@
 import { AffiliateCard } from '@/components/AffiliateCard'
+import CurvedLoop from '@/components/ui/CurvedLoop'
+import AnimatedContent from '@/components/ui/AnimatedContent'
+import FadeContent from '@/components/ui/FadeContent'
 
 const affiliates = [
   {
@@ -29,24 +32,33 @@ const affiliates = [
 
 export function AffiliatesSection() {
   return (
-    <section id="affiliates" className="py-16 sm:py-24 bg-rose-50 text-rose-950 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl mb-4 italic text-rose-950">Exclusive Access</h2>
-          <p className="uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60">
+    <section id="affiliates" className="bg-rose-50 text-rose-950 relative overflow-hidden">
+      {/* Affiliate content — sits above the curve visually */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 sm:pt-24 pb-8">
+        <FadeContent duration={600} delay={100}>
+          <p className="uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60 text-center mb-12 sm:mb-16">
             Use Code SQUIGLS for your selection
           </p>
-        </div>
+        </FadeContent>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
-          {affiliates.map((aff) => (
-            <AffiliateCard key={aff.brand} {...aff} />
+          {affiliates.map((aff, i) => (
+            <AnimatedContent key={aff.brand} distance={40} direction="vertical" duration={0.6} delay={0.1 * i}>
+              <AffiliateCard {...aff} />
+            </AnimatedContent>
           ))}
         </div>
       </div>
 
-      {/* Watermark */}
-      <div className="absolute -bottom-10 -left-10 text-[200px] font-display italic text-rose-950/5 select-none pointer-events-none leading-none">
-        Couture
+      {/* CurvedLoop — decorative, sits below the affiliate cards and overlaps */}
+      <div className="w-full -mt-28 sm:-mt-36 pb-28 sm:pb-36 relative z-0 opacity-50">
+        <CurvedLoop
+          marqueeText="Exclusive ♥ Access ♥ "
+          speed={1}
+          className="fill-rose-950! opacity-10"
+          curveAmount={400}
+          direction="left"
+          interactive
+        />
       </div>
     </section>
   )

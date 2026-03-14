@@ -1,6 +1,9 @@
 import { Heart } from 'lucide-react'
 import Waves from '@/components/Waves'
-import RippleGrid from '../ui/RippleGrid'
+import SplitText from '@/components/ui/SplitText'
+import GradientText from '@/components/ui/GradientText'
+import FadeContent from '@/components/ui/FadeContent'
+import AnimatedContent from '@/components/ui/AnimatedContent'
 
 export function HeroSection() {
   return (
@@ -60,24 +63,51 @@ export function HeroSection() {
           {/* Hero text — bottom on mobile, right-center on md+ */}
           <div className="absolute inset-0 flex items-end md:items-center md:justify-end">
             <div className="relative z-10 px-6 pb-12 md:pb-0 md:w-[42%] md:px-8 lg:px-12 xl:px-16">
-              <span className="block text-rose-300 tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[11px] md:text-sm mb-2 sm:mb-4 animate-pulse">
-                Content Creator
-              </span>
-              <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-3 sm:mb-6 leading-[0.95] italic text-rose-100">
-                Squigls
-              </h1>
-              <p className="text-rose-100/70 font-light text-xs sm:text-sm md:text-base lg:text-lg mb-5 sm:mb-8 max-w-xs sm:max-w-sm leading-relaxed">
-                Always looking for streaming, modeling, acting, & voice acting opportunities!
-              </p>
-              <div className="flex">
-                <a
-                  href="#support"
-                  className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-4 border border-rose-300/40 text-[9px] sm:text-[11px] md:text-xs tracking-widest uppercase hover:bg-rose-300/10 hover:border-rose-300/60 transition-all duration-500 text-rose-100"
+              <FadeContent duration={800} delay={0} blur>
+                <span className="block text-rose-300 tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[11px] md:text-sm mb-2 sm:mb-4">
+                  Content Creator
+                </span>
+              </FadeContent>
+
+              {/* Squigls title — always gradient, blurred in */}
+              <FadeContent duration={1200} delay={200} blur>
+                <GradientText
+                  colors={['#ffe4e6', '#fb7185', '#fda4af', '#ffe4e6']}
+                  animationSpeed={6}
+                  className="!rounded-none"
                 >
-                  <Heart size={14} className="text-rose-300/70" />
-                  Show Your Support
-                </a>
+                  <h1 className="font-display text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.95] italic">
+                    Squigls
+                  </h1>
+                </GradientText>
+              </FadeContent>
+
+              <div className="mb-5 sm:mb-8 mt-3 sm:mt-6 max-w-xs sm:max-w-sm">
+                <SplitText
+                  text="Always looking for streaming, modeling, acting, & voice acting opportunities!"
+                  className="text-rose-100/70 font-light text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed"
+                  splitType="words"
+                  delay={40}
+                  duration={0.8}
+                  ease="power3.out"
+                  from={{ opacity: 0, y: 20 }}
+                  to={{ opacity: 1, y: 0 }}
+                  tag="p"
+                  textAlign="left"
+                />
               </div>
+
+              <AnimatedContent distance={30} direction="vertical" duration={0.6} delay={0.4}>
+                <div className="flex">
+                  <a
+                    href="#support"
+                    className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-4 border border-rose-300/40 text-[9px] sm:text-[11px] md:text-xs tracking-widest uppercase hover:bg-rose-300/10 hover:border-rose-300/60 transition-all duration-500 text-rose-100"
+                  >
+                    <Heart size={14} className="text-rose-300/70" />
+                    Show Your Support
+                  </a>
+                </div>
+              </AnimatedContent>
             </div>
           </div>
         </div>
