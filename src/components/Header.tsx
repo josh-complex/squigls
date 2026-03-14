@@ -10,11 +10,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 px-8 py-5 flex items-center justify-between bg-transparent">
-        <Link to="/" className="font-display text-2xl text-rose-100 tracking-wide italic">
+      <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between bg-transparent mix-blend-difference">
+        <Link to="/" className="font-display text-base sm:text-lg md:text-xl text-rose-100 tracking-widest italic uppercase">
           Squigls
         </Link>
-        <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase text-rose-200/80">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[10px] md:text-xs tracking-widest uppercase font-light text-rose-100/80">
           <a href="#lookthrough" className="hover:text-rose-100 transition-colors">Lookthrough</a>
           <a href="#affiliates" className="hover:text-rose-100 transition-colors">Affiliates</a>
           <a href="#support" className="hover:text-rose-100 transition-colors">Support</a>
