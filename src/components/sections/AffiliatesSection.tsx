@@ -48,7 +48,7 @@ export function AffiliatesSection() {
       {/* Affiliate content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-24 pb-16 sm:pb-24">
         <FadeContent duration={600} delay={100}>
-          <p className="uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60 text-center mb-8 sm:mb-16">
+          <p className="hidden sm:block uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60 text-center mb-8 sm:mb-16">
             Use Code SQUIGLS for your selection
           </p>
         </FadeContent>
