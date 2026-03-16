@@ -1,6 +1,6 @@
 export interface AffiliateCardProps {
   brand: string
-  code: string
+  code?: string
   desc: string
   url: string
 }
@@ -19,7 +19,7 @@ export function AffiliateCard({ brand, code, desc, url }: AffiliateCardProps) {
     >
       <h4 className="font-display text-2xl text-rose-950">{brand}</h4>
       <div className="py-3 px-6 border border-rose-900/20 inline-block transition-colors group-hover:border-rose-700/50">
-        <span className="tracking-[0.3em] font-bold font-mono text-rose-900">{code}</span>
+        <span className="tracking-[0.3em] font-bold font-mono text-rose-900">{code ?? 'SHOP NOW'}</span>
       </div>
       <p className="text-[10px] uppercase tracking-widest text-rose-900/50">{desc}</p>
     </a>

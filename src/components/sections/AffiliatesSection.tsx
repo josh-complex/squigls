@@ -9,7 +9,6 @@ const affiliates = [
   },
   {
     brand: 'V1 Tech',
-    code: 'SQUIGLS',
     desc: 'Custom PC Hardware',
     url: 'https://www.v1tech.com/?ref=SQUIGLS',
   },
@@ -34,7 +33,7 @@ export function AffiliatesSection() {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl mb-4 italic text-rose-950">Exclusive Access</h2>
           <p className="uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60">
-            Use Code SQUIGLS for your selection
+            Shop my faves & save
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
