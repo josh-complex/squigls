@@ -1,4 +1,7 @@
 import { AffiliateCard } from '@/components/AffiliateCard'
+import AnimatedContent from '@/components/ui/AnimatedContent'
+import CurvedLoop from '@/components/ui/CurvedLoop'
+import FadeContent from '@/components/ui/FadeContent'
 
 const affiliates = [
   {
@@ -28,24 +31,33 @@ const affiliates = [
 
 export function AffiliatesSection() {
   return (
-    <section id="affiliates" className="py-16 sm:py-24 bg-rose-50 text-rose-950 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl mb-4 italic text-rose-950">Exclusive Access</h2>
-          <p className="uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60">
-            Shop my faves & save
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
-          {affiliates.map((aff) => (
-            <AffiliateCard key={aff.brand} {...aff} />
-          ))}
-        </div>
+    <section id="affiliates" className="bg-rose-50 text-rose-950 relative overflow-hidden">
+      {/* CurvedLoop heading — visible at top on mobile, decorative overlay on desktop */}
+      <div className="w-full pt-8 pb-6 sm:pb-0 sm:pt-0 sm:-mb-20 md:-mb-28 relative z-0 sm:opacity-50">
+        <CurvedLoop
+          marqueeText="Exclusive ♥ Access ♥ "
+          speed={1}
+          className="fill-rose-950! sm:opacity-10"
+          curveAmount={400}
+          direction="left"
+          interactive
+        />
       </div>
 
-      {/* Watermark */}
-      <div className="absolute -bottom-10 -left-10 text-[200px] font-display italic text-rose-950/5 select-none pointer-events-none leading-none">
-        Couture
+      {/* Affiliate content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-24 pb-16 sm:pb-24">
+        <FadeContent duration={600} delay={100}>
+          <p className="hidden sm:block uppercase tracking-widest text-[10px] sm:text-xs text-rose-900/60 text-center mb-8 sm:mb-16">
+            Shop my faves & save
+          </p>
+        </FadeContent>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-12">
+          {affiliates.map((aff, i) => (
+            <AnimatedContent key={aff.brand} distance={40} direction="vertical" duration={0.6} delay={0.1 * i}>
+              <AffiliateCard {...aff} />
+            </AnimatedContent>
+          ))}
+        </div>
       </div>
     </section>
   )

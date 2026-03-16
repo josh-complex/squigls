@@ -27,7 +27,7 @@ export function SocialCard({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative overflow-hidden aspect-[4/5] bg-rose-900/40 backdrop-blur-sm border border-rose-300/10 flex flex-col justify-end p-8 transition-all duration-400 hover:bg-rose-800/50 hover:border-rose-300/30 hover:-translate-y-1"
+      className="group relative overflow-hidden aspect-[5/4] bg-rose-900/40 backdrop-blur-sm border border-rose-300/10 flex flex-col justify-end p-8 transition-all duration-400 hover:bg-rose-800/50 hover:border-rose-300/30 hover:-translate-y-1"
     >
       <div className="absolute top-8 left-8 text-xs tracking-[0.3em] uppercase text-rose-200/50">
         {num} / {section}

@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import { Home, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 import { useState } from 'react'
 import ClerkHeader from '../integrations/clerk/header-user.tsx'
@@ -13,7 +13,7 @@ export default function Header() {
         <Link to="/" className="font-display text-lg md:text-xl lg:text-2xl xl:text-4xl text-rose-100 tracking-widest italic">
           Squigls
         </Link>
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-base xl:text-lg  tracking-widest uppercase font-light text-rose-100/70">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base xl:text-lg  tracking-widest uppercase font-light text-rose-100/70">
           <a href="#socials" className="hover:text-rose-100 transition-colors">socials</a>
           <a href="#affiliates" className="hover:text-rose-100 transition-colors">Affiliates</a>
           <a href="#support" className="hover:text-rose-100 transition-colors">Support</a>
@@ -28,7 +28,7 @@ export default function Header() {
       </header>
 
       <aside
-        className={`fixed top-0 left-0 h-full w-80 bg-rose-900 text-rose-50 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
+        className={`fixed top-0 left-0 h-full w-[min(18rem,85vw)] bg-rose-900 text-rose-50 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -44,24 +44,12 @@ export default function Header() {
         </div>
 
         <nav className="flex-1 p-4 overflow-y-auto">
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
-            activeProps={{
-              className:
-                'flex items-center gap-3 p-3 rounded-lg bg-rose-500 hover:bg-rose-500/80 transition-colors mb-2',
-            }}
-          >
-            <Home size={20} />
-            <span className="font-medium">Home</span>
-          </Link>
           <a
             href="#socials"
             onClick={() => setIsOpen(false)}
             className="flex items-center gap-3 p-3 rounded-lg hover:bg-rose-800 transition-colors mb-2"
           >
-            <span className="font-medium">socials</span>
+            <span className="font-medium">Socials</span>
           </a>
           <a
             href="#affiliates"
